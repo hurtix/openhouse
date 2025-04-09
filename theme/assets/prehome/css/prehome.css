@@ -1,0 +1,362 @@
+.menu-fixed{
+    position:fixed;
+    width:100%;
+    height: 21%;
+    z-index: 9999;
+    background-image: url('https://open-house.com.co/wp-content/themes/understrap-child-main/assets/prehome/img/menu.png');
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    z-index:9999;
+    /*background-image:url('../img/menu.png');*/
+    margin-left: 30px;
+    margin-top: 20px;
+    display: none;
+}
+.wrapper-prehome{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: ;
+    padding: 0;
+    overflow: hidden;
+}
+.wrapper-prehome-mobile{
+    position:relative;
+    width:100%;
+    height:900px;
+    background:#e8e8e8;
+    display:none;
+}
+.column-uno,.column-dos{
+    height:100%;
+    padding:0;
+    background-position: center center;
+    background-size:cover;
+    overflow:hidden;
+    filter: grayscale(10);
+}
+.column-uno:hover,.column-dos:hover{
+    filter: grayscale(0);
+}
+.column-uno-mobile,.column-dos-mobile{
+    position:relative;
+    width:100%;
+    height:450px;
+    display:block;
+    background-position: center center;
+    background-size:cover;
+    overflow:hidden;
+}
+.column-dos-mobile{
+    width:100%;
+    height:450px;
+    display:block;
+    background-position: 88% -28%;
+    background-size: 70%;
+    overflow:hidden;
+    background-repeat:no-repeat;
+}
+.column-uno{
+    position: relative;
+    width: 57%;
+    /*background:red;*/
+    background: #dc4735;
+    -webkit-clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+    -moz-clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+    -webkit-shape-margin: 20px;
+    z-index:10;
+}
+.column-dos{
+    position: absolute;
+    background:silver;
+    clip-path: url(path.svg#c1);
+    -webkit-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-shape-margin: 20px;
+    width: 61%;
+    z-index: 11;
+    right: 0px;
+}
+.other-backgroundleft {
+    position: absolute;
+    clip-path: url(path.svg#c1);
+    -webkit-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-shape-margin: 20px;
+    width: 101%;
+    z-index: -1;
+    right: 0px;
+    height: 95%;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 53%;
+    overflow: hidden;
+    /*opacity: 0;*/
+    transition:all .4s ease;
+    -webkit-transition:all .4s ease;
+    -moz-transition:all .4s ease;
+    -ms-transition:all .4s ease;
+}
+.other-background {
+    position: absolute;
+    clip-path: url(path.svg#c1);
+    -webkit-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-shape-margin: 20px;
+    width: 101%;
+    z-index: -1;
+    right: 0px;
+    height: 95%;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 5%;
+    overflow: hidden;
+    /*opacity: 0;*/
+    transition:all .4s ease;
+    -webkit-transition:all .4s ease;
+    -moz-transition:all .4s ease;
+    -ms-transition:all .4s ease;
+}
+.white-arrow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index:1;
+    cursor:pointer;
+}
+.red-arrow{
+    position: absolute;
+    left: 8%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index:1;
+    cursor:pointer;
+}
+.msn_one {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 300px;
+    height: 165px;
+    display: block;
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px;
+    text-align: center;
+    left: 20%;
+}
+/*
+.msn_one{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    right: 23%;
+    width: 274px;
+    height: 132px;
+  // padding-bottom: 20px;
+    background: ;
+    display: block;
+}
+*/
+.link-uno{
+    position: absolute;
+    background:;
+    width: 20px;
+    height: 100%;
+    z-index: 1000004;
+    display: inline-block;
+    left: 44%;
+}
+.link-dos{
+    position: absolute;
+    background:;
+    width: 20px;
+    height: 100%;
+    z-index: 1000004;
+    display: inline-block;
+    left: 48.5%;
+}
+.msn_two h2,
+.msn_one h2{
+    font-family:inherit;
+    font-size:27px;
+    /*color:#ffffff;*/
+    color:#000;
+    margin-bottom: 0px;
+    margin-top: 1vh;
+}
+.msn_one p{
+    font-family:inherit;
+    font-size:15px;
+    color:#000;
+    /*color:#ffffff;*/
+    margin-top: 0px;
+    display:none;
+}
+/*
+.msn_two{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    left: 18%;
+    width: 274px;
+    height: 132px;
+   // padding-bottom: 20px;
+    background: ;
+    display: block;
+    text-align:right;
+}
+*/
+.msn_two {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 300px;
+    height: 165px;
+    display: block;
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px;
+    text-align: center;
+    right: 20%;
+}
+
+.msn_two h1{
+    font-family:inherit;
+    color:#000;
+    /*color:#ed1c2e;*/
+    margin-bottom: 0px;
+}
+.msn_one a{
+    position:relative;
+    font-family:inherit;
+    color:#000;
+    /*color: #ffffff;*/
+    display: inline-block;
+    width: 135px;
+    height: 30px;
+    border: 2px solid #000;
+    /*border: 2px solid #ffffff;*/
+    text-align: center;
+    line-height: 26px;
+}
+/*.msn_one a:after{
+    content: '';
+    background-image: url('https://open-house.com.co/wp-content/themes/understrap-child-main/assets/prehome/img/arrow-white-right.png');
+    height: 20px;
+    width: 14px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 60%;
+    top: 8px;
+}
+*/
+.msn_two a{
+    position:relative;
+    font-family: inherit;
+    color: #000;
+    /*color: #ed1c2e;*/
+    display: inline-block;
+    width: 135px;
+    height: 30px;
+    border: 2px solid #000;
+    /*border: 2px solid #ed1c2e;*/
+    text-align: center;
+    line-height: 26px;
+}
+.msn_two a:hover,
+.msn_one a:hover {
+  background-color: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo);
+}
+/*.msn_two a:before {
+    content: '';
+    background-image: url('https://open-house.com.co/wp-content/themes/understrap-child-main/assets/prehome/img/arrow-red-right.png');
+    height: 20px;
+    width: 14px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 20%;
+    top: 8px;
+}*/
+.msn_two p{
+    font-family: inherit;
+    font-size:15px;
+    color:#000;
+    /*color:#ed1c2e;*/
+    margin-top: 0px;
+    display:none;
+}
+.stick-footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 99999;
+    width: 100%;
+}
+
+@media(max-width: 1024px){
+    .other-background{
+        background-position:50%;
+    }
+    .other-backgroundleft{
+        background-position:44%;
+    }
+}
+@media(max-width: 950px){
+    .wrapper-prehome-mobile{
+        display:block;
+    }
+    .wrapper-prehome{
+        display:none;
+    }
+    .msn_one{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 10%;
+    }
+    .msn_one p,.msn_two p{
+        display:block;
+    }
+    .msn_two{
+        left:5%;
+    }
+}
+@media(max-width: 480px){
+    .wrapper-prehome-mobile {
+        height: 100%;
+    }
+    .column-dos-mobile{
+        background-size: 60%;
+        background-position: bottom right;
+    }
+    .column-uno-mobile, .column-dos-mobile {
+        height: 350px !important;
+    }
+    .msn_two {
+        height: 262px;
+        text-align: left;
+        left: 10px;
+    }
+    .column-uno-mobile {
+        text-align: right;
+    }
+    .msn_one {
+        right: 10px;
+    }
+}
+
+
