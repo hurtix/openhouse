@@ -30,7 +30,7 @@
 					<div class="lg:hidden fixed bottom-5 right-5 z-50">
 						<button
 							@click="isOpen = !isOpen"
-							class="w-[50px] h-[50px] bg-[var(--red)] hover:bg-[var(--darkred)] rounded-full shadow-[0_0_0_4px_rgba(255,255,255,0.3)] hover:shadow-[0_0_0_8px_rgba(255,255,255,0.3)] flex items-center justify-center text-white transition-all duration-200 focus:outline-none cursor-pointer"
+							class="w-[50px] h-[50px] bg-[var(--red)] hover:bg-[var(--darkred)] rounded-full shadow-[0_0_0_4px_rgba(0,0,0,0.3)] hover:shadow-[0_0_0_8px_rgba(0,0,0,0.3)] flex items-center justify-center text-white transition-all duration-200 focus:outline-none cursor-pointer"
 							:class="{ 'animate-[pulse_0.6s_linear_forwards]': isOpen }"
 							aria-controls="primary-menu"
 							:aria-expanded="isOpen">
@@ -51,7 +51,7 @@
 						array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform',
+							'menu_class'     => 'hidden lg:flex fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform',
 							'items_wrap'     => '<ul x-show="isOpen || window.innerWidth >= 1024" x-transition.opacity id="%1$s" class="%2$s">%3$s</ul>',
 							'walker'         => new class extends Walker_Nav_Menu {
 								public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)

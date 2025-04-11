@@ -9,8 +9,8 @@
 
 get_header();
 ?>
-<div class="bg-[var(--dark)] h-[25vh]">
-    <div class="text-white container mx-auto px-4 md:px-0 pt-64 md:pt-0 flex justify-end items-start h-full flex-col">
+<div class="bg-[var(--dark)] h-auto lg:h-[25vh]">
+    <div class="text-white container mx-auto px-4 md:px-0 pt-30 md:pt-0 flex justify-end items-start h-full flex-col">
         <h2 class="font-bold text-4xl">Proyectos que inspiran progreso</h2>
         <p>Explora nuestra selección de proyectos destacados y encuentra el lugar ideal para vivir, trabajar o invertir.</p>
     </div>
