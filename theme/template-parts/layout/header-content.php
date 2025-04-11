@@ -14,7 +14,7 @@
 	<?php
 	if (isCurrency()) :
 	?>
-		<div class="w-full text-[0.75rem] text-center text-white bg-[var(--red)] py-1"><span class="block w-2/3 mx-auto leading-none md:leading-normal">Los precios en moneda extranjera son un aproximado calculados según la TRM del día.</span></div>
+		<div class="w-full text-[0.75rem] text-center text-white bg-[var(--red)] py-1"><span class="block w-3/4 mx-auto leading-none md:leading-normal">Los precios en moneda extranjera son un aproximado calculados según la TRM del día.</span></div>
 	<?php
 	endif;
 	?>
