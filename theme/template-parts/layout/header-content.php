@@ -46,13 +46,13 @@
         </button>
     </div>
 
-    <?php
+	<?php
     wp_nav_menu(
         array(
             'theme_location' => 'menu-1',
             'menu_id'        => 'primary-menu',
-            'menu_class'     => 'fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform hidden lg:flex',
-            'items_wrap'     => '<ul x-cloak x-show="isOpen || window.innerWidth >= 1024" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" id="%1$s" class="%2$s">%3$s</ul>',
+            'menu_class'     => 'fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform',
+            'items_wrap'     => '<ul x-cloak x-show.important="isOpen || window.innerWidth >= 1024" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" id="%1$s" class="%2$s">%3$s</ul>',
             'walker'         => new class extends Walker_Nav_Menu {
                 public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
                 {
