@@ -10,7 +10,7 @@
 
 ?>
 
-<header id="masthead" class="w-full fixed top-0 z-50 bg-transparent transition-all duration-700">
+<header id="masthead" class="w-full fixed top-0 z-50 bg-transparent transition-all duration-700" style="[x-cloak]{display:none !important;}">
 	<?php
 	if (isCurrency()) :
 	?>
@@ -26,43 +26,43 @@
 				</a>
 			</div>
 			<div class="flex justify-between items-center gap-4">
-			<nav id="site-navigation" x-data="{ isOpen: false }" class="flex items-center gap-6">
-                    <div class="lg:hidden fixed bottom-5 right-5 z-50">
-                        <button
-                            @click="isOpen = !isOpen"
-                            class="w-[50px] h-[50px] bg-[var(--red)] hover:bg-[var(--darkred)] rounded-full shadow-[0_0_0_4px_rgba(0,0,0,0.3)] hover:shadow-[0_0_0_8px_rgba(0,0,0,0.3)] flex items-center justify-center text-white transition-all duration-200 focus:outline-none cursor-pointer"
-                            :class="{ 'animate-pulse': isOpen }"
-                            aria-controls="primary-menu"
-                            :aria-expanded="isOpen">
-                            <div class="w-5 h-5 flex flex-col justify-between transition-transform duration-300"
-                                :class="{'[transform:rotate(-45deg)]': isOpen}">
-                                <div class="w-1/2 h-0.5 bg-white rounded transition-transform duration-300 origin-right"
-                                    :class="{ '[transform:rotate(-90deg)_translateX(1px)]': isOpen }"></div>
-                                <div class="w-full h-0.5 bg-white rounded"></div>
-                                <div class="w-1/2 h-0.5 bg-white rounded self-end transition-transform duration-300 origin-left"
-                                    :class="{ '[transform:rotate(-90deg)_translateX(-1px)]': isOpen }"></div>
-                            </div>
-                            <span class="sr-only">Menu</span>
-                        </button>
-                    </div>
+			<nav id="site-navigation" x-data="{ isOpen: false }" class="flex items-center gap-6" x-init="$watch('isOpen', value => { if (value) document.body.style.overflow = 'hidden'; else document.body.style.overflow = 'auto'; })">
+    <div class="lg:hidden fixed bottom-5 right-5 z-50">
+        <button
+            @click="isOpen = !isOpen"
+            class="w-[50px] h-[50px] bg-[var(--red)] hover:bg-[var(--darkred)] rounded-full shadow-[0_0_0_4px_rgba(0,0,0,0.3)] hover:shadow-[0_0_0_8px_rgba(0,0,0,0.3)] flex items-center justify-center text-white transition-all duration-200 focus:outline-none cursor-pointer"
+            :class="{ 'animate-[pulse_0.6s_linear_forwards]': isOpen }"
+            aria-controls="primary-menu"
+            :aria-expanded="isOpen">
+                       <div class="w-5 h-5 flex flex-col justify-between transition-transform duration-300"
+                :class="{'[transform:rotate(-45deg)]': isOpen}">
+                <div class="w-1/2 h-0.5 bg-white rounded transition-transform duration-300 origin-right"
+                    :class="{ '[transform:rotate(-90deg)_translateX(1px)]': isOpen }"></div>
+                <div class="w-full h-0.5 bg-white rounded"></div>
+                <div class="w-1/2 h-0.5 bg-white rounded self-end transition-transform duration-300 origin-left"
+                    :class="{ '[transform:rotate(-90deg)_translateX(-1px)]': isOpen }"></div>
+            </div>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
 
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'menu-1',
-                            'menu_id'        => 'primary-menu',
-                            'menu_class'     => 'lg:flex fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform',
-                            'items_wrap'     => '<ul x-cloak x-show="isOpen || window.innerWidth >= 1024" x-transition.opacity id="%1$s" class="%2$s">%3$s</ul>',
-                            'walker'         => new class extends Walker_Nav_Menu {
-                                public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-                                {
-                                    $output .= '<li><a href="' . esc_url($item->url) . '" class="block py-2 lg:py-0 text-xl text-white hover:text-gray-200 transition-colors">' . $item->title . '</a></li>';
-                                }
-                            }
-                        )
-                    );
-                    ?>
-                </nav>
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'menu-1',
+            'menu_id'        => 'primary-menu',
+            'menu_class'     => 'fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform hidden lg:flex',
+            'items_wrap'     => '<ul x-cloak x-show="isOpen || window.innerWidth >= 1024" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" id="%1$s" class="%2$s">%3$s</ul>',
+            'walker'         => new class extends Walker_Nav_Menu {
+                public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+                {
+                    $output .= '<li><a href="' . esc_url($item->url) . '" class="block py-2 lg:py-0 text-xl text-white hover:text-gray-200 transition-colors">' . $item->title . '</a></li>';
+                }
+            }
+        )
+    );
+    ?>
+</nav>
 
 				<div x-data="{ 
     open: false,
