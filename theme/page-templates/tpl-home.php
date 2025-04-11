@@ -31,9 +31,9 @@ get_header();
                     <div class="container mx-auto px-4">
                         <div class="max-w-4xl">
                             <h1 class="font-bold leading-tight">
-                                <span class="inline md:inline-block text-4xl  px-3 bg-[var(--red)] text-white"><?php the_field('titulo_s1'); ?></span>
+                                <span class="inline lg:inline-block text-4xl  px-3 bg-[var(--red)] text-white"><?php the_field('titulo_s1'); ?></span>
                             </h1>
-                            <h2 class="text-3xl md:text-4xl text-white font-bold mt-2"><?php the_field('subtitulo_s1'); ?></h2>
+                            <h2 class="text-3xl lg:text-4xl text-white font-bold mt-2"><?php the_field('subtitulo_s1'); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -42,8 +42,8 @@ get_header();
     </div>
 </div>
 
-<div class="-mt-[244px] relative z-10">
-    <div class="container mx-auto bg-[var(--dark)] rounded-3xl rounded-bl-none  rounded-br-none md:rounded-3xl p-4 md:p-12">
+<div class="-mt-[244px] md:-mt-[120px] lg:-mt-[244px] relative z-10">
+    <div class="container mx-auto bg-[var(--dark)] rounded-3xl rounded-bl-none  rounded-br-none lg:rounded-3xl p-4 md:p-12 lg:p-12">
         <div class="w-full">
             <div x-data="{ activeTab: 1 }">
 
@@ -124,7 +124,7 @@ get_header();
 
         <hr class="border-t border-white my-6">
 
-        <div class="flex flex-col md:flex-row justify-between items-center gap-y-4 md:gap-y-0">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-y-4 lg:gap-y-0">
             <span class="text-lg text-white"><?php the_field('subtitulo_2'); ?></span>
             <a href="/proyecto" class="px-6 py-2 bg-[var(--red)] text-white text-nowrap rounded-full hover:bg-[var(--darkred)] transition-colors"><?php the_field('texto_boton_1'); ?></a>
         </div>
@@ -132,19 +132,19 @@ get_header();
 </div>
 
 <div class="py-20">
-    <div class="container mx-auto px-4 md:px-0">
+    <div class="container mx-auto px-4 lg:px-0">
         <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold"><?php the_field('titulo_s12'); ?></h2>
+            <h2 class="text-4xl lg:text-5xl font-bold"><?php the_field('titulo_s12'); ?></h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php if (have_rows('tarjetas')): ?>
                 <?php while (have_rows('tarjetas')): the_row();
                     $link = get_sub_field('link');
                     $imagen_fondo = get_sub_field('imagen_fondo');
                     if ($imagen_fondo && $link):
                 ?>
-                        <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" class="block relative h-[65vh] rounded-3xl overflow-hidden shadow-lg border border-gray-200 group">
+                        <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" class="block relative md:h-auto lg:h-[65vh] rounded-3xl overflow-hidden shadow-lg border border-gray-200 group aspect-square lg:aspect-auto">
                             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo esc_url($imagen_fondo); ?>)"></div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-black/20">
                                 <div class="absolute bottom-0 right-0 p-8 text-right">
@@ -164,7 +164,7 @@ get_header();
 </div>
 
 <div class="pb-20">
-    <div class="container mx-auto px-4 md:px-0">
+    <div class="container mx-auto px-4 lg:px-0">
         <div class="splide" role="group" aria-label="Banner Slider">
             <div class="splide__track">
                 <div class="splide__list">
@@ -179,7 +179,7 @@ get_header();
                                         <a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>">
                                         <?php endif; ?>
 
-                                        <img class="w-full rounded-3xl border border-gray-200 aspect-square md:aspect-video object-cover md:object-none" src="<?php echo esc_url($slide_image); ?>" alt="<?php echo esc_attr($link['title'] ?? ''); ?>">
+                                        <img class="w-full rounded-3xl border border-gray-200 aspect-square lg:aspect-auto object-cover"  src="<?php echo esc_url($slide_image); ?>" alt="<?php echo esc_attr($link['title'] ?? ''); ?>">
 
                                         <?php if ($link): ?>
                                         </a>

@@ -14,20 +14,20 @@ get_header();
 
 
 
-<div class="bg-[var(--dark)] h-[35vh]">
-    <div class="container mx-auto flex justify-center items-start h-full flex-col pt-20 text-white px-4 md:px-0">
+<div class="bg-[var(--dark)] md:h-auto lg:h-[35vh]">
+    <div class="container mx-auto flex justify-center items-start h-full flex-col pt-30 pb-10 text-white px-4 md:px-0 lg:px-0">
         <h2 class="font-bold text-4xl"><?php the_title(); ?></h2>
         <p>Explora nuestra selección de proyectos destacados y encuentra el lugar ideal para vivir, trabajar o invertir.</p>
     </div>
 </div>
 
 <div class="w-full bg-gray-100 py-20">
-    <div class="container mx-auto px-4 md:px-0">
+    <div class="container mx-auto px-4 lg:px-0">
         <div class="flex flex-wrap mb-16 items-center">
-            <div class="w-full md:w-1/3">
+            <div class="w-full lg:w-1/3">
                 <h2 class="font-bold text-4xl"><?php the_field('titulo_1'); ?></h2>
             </div>
-            <div class="w-full md:w-2/3">
+            <div class="w-full lg:w-2/3">
                 <?php get_template_part('part-templates/carrusel-proyectos'); ?>
             </div>
         </div>
@@ -35,33 +35,33 @@ get_header();
         <div class="w-full">
             <div class="w-full">
                 <ul class="w-full flex justify-center items-center gap-0 flex-nowrap mb-16 investment-tabs" id="investmentTabs" role="tablist">
-                    <li class="relative w-full md:w-1/4 tab-item transition-all duration-300 ease-in-out" role="presentation">
+                    <li class="relative w-full lg:w-1/4 tab-item transition-all duration-300 ease-in-out" role="presentation">
                         <button class="tab-button active w-full p-0 cursor-pointer" id="exterior-tab" data-target="exterior" type="button" role="tab" aria-controls="exterior" aria-selected="true">
-                            <div class="big-hyperlink overflow-hidden relative rounded-[20px] rounded-tr-none rounded-br-none shadow-sm border border-gray-200 bg-cover bg-center h-[50vh] md:h-[65vh] bg-[url('https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2023/07/colombiana.webp')]">
+                            <div class="big-hyperlink overflow-hidden relative rounded-[20px] rounded-tr-none rounded-br-none shadow-sm border border-gray-200 bg-cover bg-center h-[50vh] lg:h-[65vh] bg-[url('https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2023/07/colombiana.webp')]">
                                 <div class="absolute inset-0 bg-black/50">
-                                    <div class="text-center p-2 md:p-8 h-full flex justify-end items-center md:items-end flex-col">
+                                    <div class="text-center p-2 lg:p-8 h-full flex justify-end items-center lg:items-end flex-col">
                                         <?php if (have_rows('encabezado-1')) : ?>
                                             <?php while (have_rows('encabezado-1')) : the_row(); ?>
                                                 <h2 class="text-white font-bold mb-4 text-3xl"><?php the_sub_field('titulo'); ?></h2>
                                             <?php endwhile; ?>
                                         <?php endif; ?>
-                                        <span class="inline-block px-6 py-2 bg-[var(--red)] text-white rounded-full hover:bg-[var(--darkred)] transition-colors text-sm md:text-base">Ver detalles</span>
+                                        <span class="inline-block px-6 py-2 bg-[var(--red)] text-white rounded-full hover:bg-[var(--darkred)] transition-colors text-sm lg:text-base">Ver detalles</span>
                                     </div>
                                 </div>
                             </div>
                         </button>
                     </li>
-                    <li class="relative w-full md:w-1/4 tab-item transition-all duration-300 ease-in-out" role="presentation">
+                    <li class="relative w-full lg:w-1/4 tab-item transition-all duration-300 ease-in-out" role="presentation">
                         <button class="tab-button w-full p-0 cursor-pointer" id="local-tab" data-target="local" type="button" role="tab" aria-controls="local" aria-selected="false">
-                            <div class="big-hyperlink overflow-hidden relative rounded-[20px] rounded-tl-none rounded-bl-none shadow-sm border border-gray-200 bg-cover bg-center h-[50vh] md:h-[65vh] bg-[url('https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2023/07/colombiano.webp')]">
+                            <div class="big-hyperlink overflow-hidden relative rounded-[20px] rounded-tl-none rounded-bl-none shadow-sm border border-gray-200 bg-cover bg-center h-[50vh] lg:h-[65vh] bg-[url('https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2023/07/colombiano.webp')]">
                                 <div class="absolute inset-0 bg-black/50">
-                                    <div class="text-center p-2 md:p-8 h-full flex justify-end items-center md:items-end flex-col">
+                                    <div class="text-center p-2 lg:p-8 h-full flex justify-end items-center lg:items-end flex-col">
                                         <?php if (have_rows('encabezado-2')) : ?>
                                             <?php while (have_rows('encabezado-2')) : the_row(); ?>
                                                 <h2 class="text-white font-bold mb-4 text-3xl"><?php the_sub_field('titulo'); ?></h2>
                                             <?php endwhile; ?>
                                         <?php endif; ?>
-                                        <span class="inline-block px-6 py-2 bg-[var(--red)] text-white rounded-full hover:bg-[var(--darkred)] transition-colors text-sm md:text-base">Ver detalles</span>
+                                        <span class="inline-block px-6 py-2 bg-[var(--red)] text-white rounded-full hover:bg-[var(--darkred)] transition-colors text-sm lg:text-base">Ver detalles</span>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ get_header();
                             <div class="w-full">
                                 <?php if (have_rows('encabezado-1')) : ?>
                                     <?php while (have_rows('encabezado-1')) : the_row(); ?>
-                                        <div class="flex items-center justify-around gap-2 md:gap-16">
+                                        <div class="flex items-center justify-around gap-2 lg:gap-16">
                                             <h1 class="text-4xl font-bold whitespace-nowrap"><?php the_sub_field('titulo'); ?></h1>
                                             <hr class="w-full">
                                         </div>
@@ -96,7 +96,7 @@ get_header();
                                                 $j = is_array($tarjetas) ? count($tarjetas) : 0;
                                                 ?>
 
-                                                <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-<?php echo $j; ?> gap-4">
+                                                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 lg:grid-cols-<?php echo $j; ?> gap-4">
                                                     <?php if (have_rows('tarjetas')) : ?>
                                                         <?php while (have_rows('tarjetas')) : the_row(); ?>
                                                             <?php if (have_rows('contenido')) : ?>
@@ -146,7 +146,7 @@ get_header();
                                                                                 <a href="<?php echo esc_url($link_imagen); ?>">
                                                                                 <?php endif; ?>
                                                                                 <?php if (get_sub_field('imagen')) : ?>
-                                                                                    <img class="w-full rounded-[20px] border border-gray-200 aspect-square md:aspect-video object-cover md:object-none" src="<?php the_sub_field('imagen'); ?>" alt="">
+                                                                                    <img class="w-full rounded-[20px] border border-gray-200 aspect-square lg:aspect-auto object-cover" src="<?php the_sub_field('imagen'); ?>" alt="">
                                                                                 <?php endif; ?>
                                                                                 <?php if ($link_imagen) : ?>
                                                                                 </a>
@@ -192,7 +192,7 @@ get_header();
                                                 $k = is_array($tarjetas) ? count($tarjetas) : 0;
                                                 ?>
 
-                                                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-<?php echo $k; ?> gap-4">
+                                                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:grid-cols-<?php echo $k; ?> gap-4">
                                                     <?php if (have_rows('tarjetas')) : ?>
                                                         <?php while (have_rows('tarjetas')) : the_row(); ?>
                                                             <?php if (have_rows('contenido')) : ?>
@@ -242,7 +242,7 @@ get_header();
                                                                                 <a href="<?php echo esc_url($link_imagen); ?>">
                                                                                 <?php endif; ?>
                                                                                 <?php if (get_sub_field('imagen')) : ?>
-                                                                                    <img class="w-full rounded-[20px] border border-gray-200 aspect-square md:aspect-video object-cover md:object-none" src="<?php the_sub_field('imagen'); ?>" alt="">
+                                                                                    <img class="w-full rounded-[20px] border border-gray-200 aspect-square lg:aspect-auto object-cover" src="<?php the_sub_field('imagen'); ?>" alt="">
                                                                                 <?php endif; ?>
                                                                                 <?php if ($link_imagen) : ?>
                                                                                 </a>

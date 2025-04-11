@@ -11,8 +11,8 @@ get_header();
 $imagen = get_field('imagen');
 ?>
 
-<div class="bg-[var(--dark)] h-[35vh]">
-    <div class="container mx-auto flex justify-center items-start h-full flex-col pt-20 text-white px-4 md:px-0">
+<div class="bg-[var(--dark)] md:h-auto lg:h-[35vh]">
+    <div class="container mx-auto flex justify-center items-start h-full flex-col pt-30 pb-10 text-white px-4 md:px-0 lg:px-0">
         <h2 class="font-bold text-4xl"><?php the_title(); ?></h2>
         <p>Explora nuestra selección de proyectos destacados y encuentra el lugar ideal para vivir, trabajar o invertir.</p>
     </div>
@@ -60,25 +60,25 @@ $imagen = get_field('imagen');
                 <div class="w-full">
                     <div class="tab-content pt-10 pb-15">
                         <div class="tab-pane active" id="sac" role="tabpanel" aria-labelledby="sac-tab" tabindex="0">
-                            <p class="text-center w-full md:w-1/2 px-4 md:px-0 mx-auto"><?php the_field('t1-descripcion'); ?></p>
+                            <p class="text-center w-full lg:w-1/2 px-4 lg:px-0 mx-auto"><?php the_field('t1-descripcion'); ?></p>
                             <?php //echo get_field('t1-formulario'); ?>
-                            <div class="w-full md:max-w-1/2 mx-auto pt-10 px-4 md:px-0">
+                            <div class="w-full lg:max-w-1/2 mx-auto pt-10 px-4 lg:px-0">
                                 <?php echo do_shortcode('[contact-form-7 id="a5a394b" title="Servicio al cliente"]');?>
                             </div>
                         </div>
                         <div class="tab-pane" id="proyectos" role="tabpanel" aria-labelledby="proyectos-tab" tabindex="0">
-                            <p class="text-center w-full md:w-1/2 px-4 md:px-0 mx-auto"><?php the_field('t2-descripcion'); ?></p>
+                            <p class="text-center w-full lg:w-1/2 px-4 lg:px-0 mx-auto"><?php the_field('t2-descripcion'); ?></p>
                             <div class="flex justify-center items-center">
                                 <a class="px-4 py-2 mt-10 bg-[var(--red)] text-white rounded-full hover:bg-[var(--darkred)] transition-colors" href="/proyecto"><?php the_field('t2-texto-boton'); ?></a>
                             </div>
-                            <div class="px-4 md:px-0">
+                            <div class="px-4 lg:px-0">
                                 <?php get_template_part('part-templates/asesores'); ?>
                             </div>
                         </div>
                         <div class="tab-pane" id="pqr" role="tabpanel" aria-labelledby="pqr-tab" tabindex="0">
-                            <p class="text-center w-full md:w-1/2 px-4 md:px-0 mx-auto"><?php the_field('t3-descripcion'); ?></p>
+                            <p class="text-center w-full lg:w-1/2 px-4 lg:px-0 mx-auto"><?php the_field('t3-descripcion'); ?></p>
                             <?php //echo get_field('t3-formulario'); ?>
-                            <div class="w-full md:max-w-1/2 mx-auto pt-10 px-4 md:px-0">
+                            <div class="w-full lg:max-w-1/2 mx-auto pt-10 px-4 lg:px-0">
                                 <?php echo do_shortcode('[contact-form-7 id="9267d93" title="PQRS"]');?>
                             </div>
                         </div>

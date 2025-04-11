@@ -106,13 +106,13 @@ defined( 'ABSPATH' ) || exit;
                         echo $min_mes . ' meses';
                     } ?>
                 </span>
-                <input type="range" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mb-2" min="<?php echo $min_mes; ?>" max="<?php echo $max_mes; ?>" value="<?php echo $min_mes; ?>" id="cantidad-meses">
+                <input type="range" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mb-5" min="<?php echo $min_mes; ?>" max="<?php echo $max_mes; ?>" value="<?php echo $min_mes; ?>" id="cantidad-meses">
                 <span class="text-sm leading-none absolute bottom-0 left-0 select-none"><?php echo $min_mes; ?></span>
-                <span class="block text-center w-full text-xs leading-none absolute bottom-0 select-none">Desliza para ajustar la cantidad de tiempo</span>
+                <span class="block text-center w-full text-xs leading-normal absolute bottom-0 select-none">Desliza para ajustar la cantidad de tiempo</span>
                 <span class="text-sm leading-none absolute bottom-0 right-0 select-none"><?php echo $max_mes; ?></span>
             </div>
             <?php if($tipo=='tipo1') { ?>
-                <hr class="my-4">
+                <hr class="my-4 opacity-25">
                 <div class="mb-2">
                     <label class="block text-sm mb-1">Saldo restante (<?php echo $contraentrega; ?>%) a la entrega del proyecto:</label>
                     <div class="flex">

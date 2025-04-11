@@ -524,3 +524,19 @@ body {
     #investmentTabs .tab-button.active .big-hyperlink::before {
       filter: none;
     }
+    @keyframes pulse {
+      0% {
+          box-shadow: 0px 0px 0px 0px rgba(92,103,255,0.3);
+      }
+      50% {
+          box-shadow: 0px 0px 0px 12px rgba(92,103,255,0.1);
+      }
+      100% {
+          box-shadow: 0px 0px 0px 4px rgba(92,103,255,0.3);
+      }
+  }
+  
+  .animate-pulse {
+      animation: pulse 0.6s linear forwards;
+  }
+  

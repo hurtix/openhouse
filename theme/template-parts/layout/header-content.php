@@ -14,34 +14,49 @@
 	<?php
 	if (isCurrency()) :
 	?>
-		<div class="w-full text-[0.75rem] text-center text-white bg-[var(--red)] py-1">Los precios en moneda extranjera son un aproximado calculados según la TRM del día.</div>
+		<div class="w-full text-[0.75rem] text-center text-white bg-[var(--red)] py-1"><span class="block w-2/3 mx-auto leading-none md:leading-normal">Los precios en moneda extranjera son un aproximado calculados según la TRM del día.</span></div>
 	<?php
 	endif;
 	?>
 	<div class="container mx-auto py-4">
 		<div class="flex justify-between items-center px-4 md:px-0">
-			<div>
+			<div class="z-2">
 				<a href="/">
 					<img class="w-[150px]" src="https://open-house.com.co/wp-content/uploads/imagotipo.svg" alt="">
 				</a>
 			</div>
 			<div class="flex justify-between items-center gap-4">
-				<nav id="site-navigation" class="flex items-center gap-6" aria-label="<?php esc_attr_e('Main Navigation', 'openhouse'); ?>">
-					<!-- <button class="lg:hidden text-white" aria-controls="primary-menu" aria-expanded="false">
-						<?php esc_html_e('Primary Menu', 'openhouse'); ?>
-					</button> -->
+				<nav id="site-navigation" x-data="{ isOpen: false }" class="flex items-center gap-6">
+					<div class="lg:hidden fixed bottom-5 right-5 z-50">
+						<button
+							@click="isOpen = !isOpen"
+							class="w-[50px] h-[50px] bg-[var(--red)] hover:bg-[var(--darkred)] rounded-full shadow-[0_0_0_4px_rgba(255,255,255,0.3)] hover:shadow-[0_0_0_8px_rgba(255,255,255,0.3)] flex items-center justify-center text-white transition-all duration-200 focus:outline-none cursor-pointer"
+							:class="{ 'animate-[pulse_0.6s_linear_forwards]': isOpen }"
+							aria-controls="primary-menu"
+							:aria-expanded="isOpen">
+							<div class="w-5 h-5 flex flex-col justify-between transition-transform duration-300"
+								:class="{'[transform:rotate(-45deg)]': isOpen}">
+								<div class="w-1/2 h-0.5 bg-white rounded transition-transform duration-300 origin-right"
+									:class="{ '[transform:rotate(-90deg)_translateX(1px)]': isOpen }"></div>
+								<div class="w-full h-0.5 bg-white rounded"></div>
+								<div class="w-1/2 h-0.5 bg-white rounded self-end transition-transform duration-300 origin-left"
+									:class="{ '[transform:rotate(-90deg)_translateX(-1px)]': isOpen }"></div>
+							</div>
+							<span class="sr-only">Menu</span>
+						</button>
+					</div>
 
 					<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'hidden lg:flex items-center gap-6',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'menu_class'     => 'fixed h-full lg:h-auto lg:relative top-0 left-0 w-full lg:w-auto bg-[var(--dark)] lg:bg-transparent p-4 lg:p-0 flex flex-col justify-center lg:flex-row items-center uppercase tracking-[5px] lg:tracking-normal lg:normal-case gap-6 transition-all duration-300 transform',
+							'items_wrap'     => '<ul x-show="isOpen || window.innerWidth >= 1024" x-transition.opacity id="%1$s" class="%2$s">%3$s</ul>',
 							'walker'         => new class extends Walker_Nav_Menu {
 								public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
 								{
-									$output .= '<li><a href="' . esc_url($item->url) . '" class="text-xl text-white hover:text-gray-200 transition-colors">' . $item->title . '</a></li>';
+									$output .= '<li><a href="' . esc_url($item->url) . '" class="block py-2 lg:py-0 text-xl text-white hover:text-gray-200 transition-colors">' . $item->title . '</a></li>';
 								}
 							}
 						)
@@ -87,7 +102,7 @@
 						</template>
 					</ul>
 				</div>
-				<button type="button" class="hidden md:block border border-white px-4 py-2 bg-[var(--red)] rounded-full text-white hover:bg-[var(--darkred)] cursor-pointer" onclick="abrirSplash();">
+				<button type="button" class="hidden lg:block border border-white px-4 py-2 bg-[var(--red)] rounded-full text-white hover:bg-[var(--darkred)] cursor-pointer" onclick="abrirSplash();">
 					Te llamamos
 				</button>
 				<div class="w-[1px] bg-white/50 h-[30px]"></div>

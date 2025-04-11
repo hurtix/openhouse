@@ -42,8 +42,8 @@ $video = get_field('video', $post_id);
   <div class="flex flex-wrap">
     <div class="w-full relative after:absolute after:content-[''] after:bottom-0 after:left-0 after:w-full after:h-full after:bg-black/50 after:z-0">
       <?php if (have_rows('rep-avances-obra')) : ?>
-        <div id="goTo--avances" class="absolute md:fixed top-[80%] md:top-[120px] flex justify-end items-center z-4 w-full">
-          <a class="btn border border-white text-white hover:bg-[var(--red)] hover:text-white rounded-full mr-3 py-2 px-3 text-sm md:text-base" href="#avances">Avances de obra</a>
+        <div id="goTo--avances" class="absolute lg:fixed top-[80%] lg:top-[120px] flex justify-end items-center z-4 w-full">
+          <a class="btn border border-white text-white hover:bg-[var(--red)] hover:text-white rounded-full mr-3 py-2 px-3 text-sm lg:text-base" href="#avances">Avances de obra</a>
         </div>
       <?php endif; ?>
       <div class="splide main-slider" role="group" aria-label="Imágenes del proyecto">
@@ -53,7 +53,7 @@ $video = get_field('video', $post_id);
               <?php while (have_rows('rep-slider')) : the_row(); ?>
                 <?php if (get_sub_field('proyecto-slider-imagen')) : ?>
                   <div class="splide__slide">
-                    <img class="w-full h-[65vh] md:h-auto object-cover" src="<?php the_sub_field('proyecto-slider-imagen'); ?>" alt="Imagen del proyecto" />
+                    <img class="w-full h-[65vh] lg:h-auto object-cover" src="<?php the_sub_field('proyecto-slider-imagen'); ?>" alt="Imagen del proyecto" />
                   </div>
                 <?php endif ?>
               <?php endwhile; ?>
@@ -78,14 +78,14 @@ $video = get_field('video', $post_id);
       </script>
       <div class="container mx-auto relative z-10">
         <?php if (get_field('proyecto-logo')) : ?>
-          <div class="absolute bottom-0 left-4 md:left-0 -translate-y-1/2">
+          <div class="absolute bottom-0 left-4 lg:left-0 -translate-y-1/2 md:-translate-y-1/6 lg:-translate-y-1/2">
             <?php if (!empty($status_tax) && !is_wp_error($status_tax)) { ?>
               <div class="relative">
                 <span class="absolute text-nowrap top-2 left-[-10px] px-2 py-1 bg-red-600 text-white text-xs font-bold uppercase tracking-wider z-10 before:content-[''] before:absolute before:top-[24px] before:left-0 before:border-[5px] before:border-transparent before:border-t-red-800 before:border-r-red-800 before:-z-10"><?php echo esc_html($status->name) ?></span>
               </div>
 
             <?php } ?>
-            <img src="<?php the_field('proyecto-logo'); ?>" class="bg-white object-contain w-[125px] md:w-[200px] h-[125px] md:h-[200px] p-2 md:p-4" alt="logo" />
+            <img src="<?php the_field('proyecto-logo'); ?>" class="bg-white object-contain w-[125px] lg:w-[200px] h-[125px] lg:h-[200px] p-2 lg:p-4" alt="logo" />
           </div>
         <?php endif ?>
       </div>
@@ -104,8 +104,8 @@ $video = get_field('video', $post_id);
 </section>
 
 <section class="isLight">
-  <div class="container mx-auto pt-16 px-4 md:px-0">
-    <div class="flex flex-wrap md:flex-nowrap gap-8">
+  <div class="container mx-auto pt-16 px-4 lg:px-0">
+    <div class="flex flex-wrap lg:flex-nowrap gap-8">
       <div class="w-full lg:w-2/3 mb-5 lg:mb-0">
         <h3 class="text-3xl font-bold text-[var(--project-color)]"><?php the_field('proyecto-titulo'); ?></h3>
         <h4 class="text-xl mb-16"><?php the_field('proyecto-subtitulo'); ?></h4>
@@ -128,7 +128,7 @@ $video = get_field('video', $post_id);
           <ul class="list-none grid grid-cols-2 gap-1 pt-4 items-start [&_li]:pb-2">
             <?php if (have_rows('rep-caracteristicas')) : ?>
               <?php while (have_rows('rep-caracteristicas')) : the_row(); ?>
-                <li class="inline-flex items-start md:items-center leading-none md:leading-normal "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle text-[var(--project-color)] me-1 shrink-0" viewBox="0 0 16 16">
+                <li class="inline-flex items-start lg:items-center leading-none lg:leading-normal "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle text-[var(--project-color)] me-1 shrink-0" viewBox="0 0 16 16">
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
                   </svg><?php the_sub_field('proyecto-item-carecteristica'); ?></li>
@@ -275,7 +275,7 @@ $video = get_field('video', $post_id);
             <div class="hidden" id="panel-planos" role="tabpanel" aria-labelledby="tab-planos" tabindex="0">
               <div class="w-full">
                 <div class="flex justify-end items-center w-full relative">
-                  <select id="planos-selector" name="planos" class="w-full md:w-1/3  px-3 py-2 border rounded" onchange="cambiarPlano(this.value)">
+                  <select id="planos-selector" name="planos" class="w-full lg:w-1/3  px-3 py-2 border rounded" onchange="cambiarPlano(this.value)">
                     <?php $x = 0; ?>
                     <option value="" selected disabled hidden>Por favor seleccione un plano</option>
                     <?php while (have_rows('proyecto-planos-rep')) : the_row(); ?>
@@ -557,7 +557,7 @@ $video = get_field('video', $post_id);
 </section>
 
 <section id="asesores" class="w-full bg-gray-100">
-  <div class="container mx-auto py-16 isLight px-4 md:px-0">
+  <div class="container mx-auto py-16 isLight px-4 lg:px-0">
     <div class="flex flex-wrap">
       <div class="w-full">
         <h2 class="font-bold text-center text-4xl">Contacta a nuestros asesores</h2>
