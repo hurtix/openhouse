@@ -20,6 +20,9 @@ get_header();
     <div class="container mx-auto px-4 lg:px-0" id="content" tabindex="-1">
         <div class="flex flex-wrap">
             <div class="flex justify-between items-center mb-4 w-full">
+                <span class="sr-only z-100"></span>
+                <!-- Agregar al inicio del archivo, después del primer div -->
+                <div class="sr-only top-[11%] right-[4%] z-100 top-[16%]"></div>
                 <button id="btn-filtro" type="button" class="btn text-sm lg:text-base inline-flex cursor-pointer text-white py-3 px-4 leading-none rounded-full border border-gray-200 hover:bg-white hover:text-[var(--dark)]" data-bs-toggle="button" data-filter-value="<?php echo esc_attr($term->slug); ?>"></button>
                 <span id="resultados" class="text-white"></span>
             </div>
