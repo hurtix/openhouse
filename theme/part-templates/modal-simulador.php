@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
                 <hr class="opacity-25">
                 
                 <div class="flex justify-center items-center w-full">
-                    <img class="pointer-events-none w-[100px]" src="/wp-content/themes/understrap-child-main/assets/img/hands-2.png" alt="">
+                    <img class="pointer-events-none w-[100px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/hands-2.png" alt="">
                     <div>
                         <p class="leading-tight mb-0">¿Quieres conocer los <span class="font-bold">beneficios</span> y <span class="font-bold">descuentos</span> que tenemos para ti? Déjanos tus datos para brindarte información exclusiva.</p>
                     </div>

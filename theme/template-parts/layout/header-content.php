@@ -22,7 +22,7 @@
 		<div class="flex justify-between items-center px-4 md:px-0">
 			<div class="z-2">
 				<a href="/">
-					<img class="w-[150px]" src="https://open-house.com.co/wp-content/uploads/imagotipo.svg" alt="">
+					<img class="w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/imagotipo.svg" alt="">
 				</a>
 			</div>
 			<div class="flex justify-between items-center gap-4">

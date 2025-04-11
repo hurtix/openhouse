@@ -41,7 +41,7 @@ body {
 
 
 .pattern {
-    background-image: url(/wp-content/themes/openhouse/theme/assets/img/watermark.jpg);
+    background-image: url(/wp-content/themes/openhouse/assets/img/watermark.jpg);
     background-repeat: repeat;
     background-size: contain;
     width: 100%;

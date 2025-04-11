@@ -139,7 +139,7 @@ get_header();
                                     <div class="certificate h-auto lg:h-[600px] pt-32 pb-16 lg:p-[25px]">
                                         <div class="water-mark-overlay"></div>
                                         <div class="certificate-header">
-                                            <img src="/wp-content/themes/openhouse/theme/assets/img/ribbon.png" class="logo w-[200px] left-[-55px]  lg:left-[-115px] top-[-80px] lg:w-[300px]" alt="ribbon">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ribbon.png" class="logo w-[200px] left-[-55px]  lg:left-[-115px] top-[-80px] lg:w-[300px]" alt="ribbon">
                                         </div>
                                         <div class="certificate-body">
                                             <p class="certificate-title text-sm lg:text-base uppercase tracking-[1px] lg:tracking-[4px]"><?php the_sub_field('pre'); ?></p>

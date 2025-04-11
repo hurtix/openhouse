@@ -18,10 +18,10 @@ $habeas_data = get_field( 'footer-habeas-data', 'option' );
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="hidden md:block">
                     <?php //the_custom_logo(); ?>
-					<img class="w-[150px]" src="https://open-house.com.co/wp-content/uploads/imagotipo.svg" alt="">
+					<img class="w-[150px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/imagotipo.svg" alt="">
                     <div class="flex items-center gap-2 mt-2">
                         <span class="text-[0.75rem] text-white">Con certificación</span>
-                        <img src="/wp-content/themes/openhouse/theme/assets/img/edge.png" alt="Edge certification" class="w-[75px] h-auto">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/edge.png" alt="Edge certification" class="w-[75px] h-auto">
                     </div>
                 </div>
                 <div>
