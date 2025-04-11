@@ -8,10 +8,10 @@ module.exports = {
     extend: {},
   },
   safelist: [
-    'top-[11%]',
-    'right-[4%]',
+    'top-[105px]',
+    'right-[10px]',
     'z-100',
-    'top-[16%]'
+    'top-[150px]'
   ],
   plugins: [],
 }
