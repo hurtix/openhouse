@@ -23,8 +23,8 @@ get_header();
                 <button id="btn-filtro" type="button" class="btn text-sm lg:text-base inline-flex cursor-pointer text-white py-3 px-4 leading-none rounded-full border border-gray-200 hover:bg-white hover:text-[var(--dark)]" data-bs-toggle="button" data-filter-value="<?php echo esc_attr($term->slug); ?>"></button>
                 <span id="resultados" class="text-white"></span>
             </div>
-            <div class="flex items-start gap-8">
-                <div id="wrapper-filtro" class="hidden mb-20 shadow-lg bg-white border border-gray-200 rounded-none lg:rounded p-4">
+            <div class="flex items-start gap-8 w-full lg:w-auto">
+                <div id="wrapper-filtro" class="hidden mb-0 lg:mb-20 shadow-lg bg-white border border-gray-200 rounded-none lg:rounded p-4">
                     <a class="btn text-sm inline-flex  py-2 px-3 border border-[var(--red)] text-[var(--red)] hover:bg-[var(--red)] hover:text-white rounded-full" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 me-1" viewBox="0 0 16 16">
                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
                         </svg> Borrar filtros</a>
@@ -149,25 +149,25 @@ get_header();
     btnFiltro.addEventListener('click', function() {
                 wrapperFiltro.classList.toggle('isOpen');
                 updateButtonContent();
-                wrapperFiltro.classList.toggle('mt-[11vh]');
+                //wrapperFiltro.classList.toggle('mt-[11vh]');
                 wrapperFiltro.classList.toggle('z-99');
                 wrapperFiltro.classList.toggle('hidden');
-                wrapperFiltro.classList.toggle('absolute');
+                wrapperFiltro.classList.toggle('fixed');
                 wrapperFiltro.classList.toggle('top-0');
                 wrapperFiltro.classList.toggle('left-0');
                 wrapperFiltro.classList.toggle('w-full');
                 wrapperFiltro.classList.toggle('h-screen');
                 btnFiltro.classList.toggle('fixed');
                 btnFiltro.classList.toggle('z-100');
-                btnFiltro.classList.toggle('top-[105px]');
-                btnFiltro.classList.toggle('right-[10px]');
+                btnFiltro.classList.toggle('top-0');
+                btnFiltro.classList.toggle('right-[5px]');
                 btnFiltro.classList.toggle('bg-[var(--dark)]');
                 btnFiltro.classList.toggle('aspect-square');
                 btnFiltro.classList.toggle('items-center');
                 resultados.classList.toggle('fixed');
                 resultados.classList.toggle('z-100');
-                resultados.classList.toggle('top-[150px]');
-                resultados.classList.toggle('right-[10px]');
+                resultados.classList.toggle('top-12');
+                resultados.classList.toggle('right-[5px]');
                 resultados.classList.toggle('text-white');
                 document.body.classList.toggle('overflow-hidden');
         });
