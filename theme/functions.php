@@ -252,11 +252,11 @@ function disable_gutenberg() {
 add_action('init', 'disable_gutenberg');
 
 
-function enqueue_custom_scripts() {
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('currency-js', get_template_directory_uri() . '/inc/js/currency.js', array('jquery'), OPENHOUSE_VERSION, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+// function enqueue_custom_scripts() {
+//     wp_enqueue_script('jquery');
+//     wp_enqueue_script('currency-js', get_template_directory_uri() . '/inc/js/currency.js', array('jquery'), OPENHOUSE_VERSION, true);
+// }
+// add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 function enqueue_alpine_script() {
     wp_enqueue_script('alpine-js', get_template_directory_uri() . '/inc/alpine/alpine.min.js', array(), null, true);
