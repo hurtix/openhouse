@@ -254,7 +254,7 @@ add_action('init', 'disable_gutenberg');
 
 function enqueue_custom_scripts() {
     wp_enqueue_script('jquery');
-    wp_enqueue_script('currency-js', get_template_directory_uri() . '/theme/js/currency.js', array(), null, true);
+    wp_enqueue_script('currency-js', get_template_directory_uri() . '/js/currency.js', array('jquery'), OPENHOUSE_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
