@@ -1980,16 +1980,12 @@ input.wpcf7-form-control:hover, input.wpcf7-form-control:focus, textarea.wpcf7-f
   --tw-gradient-from: color-mix(in oklab, var(--color-black) 50%, transparent);
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
 }
-.from-black\/90 {
-  --tw-gradient-from: color-mix(in oklab, var(--color-black) 90%, transparent);
+.from-black\/60 {
+  --tw-gradient-from: color-mix(in oklab, var(--color-black) 60%, transparent);
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
 }
 .to-black\/20 {
   --tw-gradient-to: color-mix(in oklab, var(--color-black) 20%, transparent);
-  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-}
-.to-black\/40 {
-  --tw-gradient-to: color-mix(in oklab, var(--color-black) 40%, transparent);
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
 }
 .bg-cover {

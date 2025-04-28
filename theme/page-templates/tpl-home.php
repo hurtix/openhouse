@@ -27,7 +27,7 @@ get_header();
                     </div>
                 <?php endif; ?>
 
-                <div class="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-black/90 to-black/40">
+                <div class="relative flex items-center justify-center min-h-screen bg-gradient-to-b from-black/60 to-black/20">
                     <div class="container mx-auto px-4">
                         <div class="max-w-4xl">
                             <h1 class="font-bold leading-tight">
